@@ -9,8 +9,8 @@ import { fabric } from 'fabric'
 import { ref, watch, watchEffect } from 'vue'
 import { io } from 'socket.io-client'
 
-// TODO: Change to env
-const socket = io('localhost:3000')
+console.log(import.meta.env.VITE_API_SOCKET_URL)
+const socket = io(import.meta.env.VITE_API_SOCKET_URL)
 
 socket.on('connect', () => {
   // TODO: Grab already drawn things from database and draw them here
