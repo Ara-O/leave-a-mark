@@ -9,6 +9,7 @@ import { fabric } from 'fabric'
 import { camelize, ref, watch, watchEffect } from 'vue'
 import { io } from 'socket.io-client'
 
+// TODO: Change to env
 const socket = io('localhost:3000')
 
 socket.on('connect', () => {

@@ -8,6 +8,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
+    // TODO: Change to env
     origin: "http://localhost:5173",
   },
 });
