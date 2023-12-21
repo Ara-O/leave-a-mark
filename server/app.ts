@@ -6,6 +6,10 @@ const app = express();
 
 const httpServer = createServer(app);
 
+app.get("/health", (req, res) => {
+  res.send("Healthy :D");
+});
+
 const io = new Server(httpServer, {
   cors: {
     // TODO: Change to env
@@ -26,4 +30,5 @@ io.on("connection", (socket) => {
   });
 });
 
+console.log("Listening on port 3000");
 httpServer.listen(3000);
