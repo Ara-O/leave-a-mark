@@ -21,6 +21,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("path-drawn", (path) => {
+    console.log("Someone drew something");
     socket.broadcast.emit("new-path", path);
   });
 });
