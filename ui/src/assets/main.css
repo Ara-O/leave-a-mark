@@ -1,0 +1,68 @@
+.binding-clips {
+  height: 150px;
+  background-image: url('/src/assets/binding-clips.png');
+  background-size: 1600px;
+  width: 100vw;
+  position: absolute;
+  top: -109px;
+  mix-blend-mode: hard-light;
+  z-index: 50;
+  left: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+main {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0px;
+}
+
+.extras {
+  height: 250px;
+  position: absolute;
+  border: solid 1px rgb(241, 241, 241);
+  box-shadow: 1px 1px rgb(209, 209, 209);
+  bottom: 20px;
+  font-family: 'stylish', sans-serif;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  right: 20px;
+  width: 230px;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  color: rgb(57, 57, 57);
+  z-index: 99;
+}
+
+.extras-title {
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.extras-options {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.color-picker {
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+}
+
+.line-thickness-title {
+  margin-top: 0px;
+}
