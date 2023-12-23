@@ -26,8 +26,17 @@ let thickness = ref<number>(1)
 const socket = io(import.meta.env.VITE_API_SOCKET_URL)
 
 socket.on('connect', () => {
-  // TODO: Grab already drawn things from database and draw them here
   console.log(socket.id)
+
+  //Backend will receive path and emit the retrieve path method
+  socket.on('retrieve-path', (paths: any) => {
+    paths.forEach((path: any) => {
+      Object.setPrototypeOf(path.path, Object.getPrototypeOf(new fabric.Path()))
+      path.path.clone((clone: any) => {
+        canvas.add(clone)
+      })
+    })
+  })
 })
 
 socket.on('new-path', (path) => {

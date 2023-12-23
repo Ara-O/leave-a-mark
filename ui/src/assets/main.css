@@ -32,20 +32,20 @@ body {
   border: solid 1px rgb(241, 241, 241);
   box-shadow: 1px 1px rgb(209, 209, 209);
   bottom: 20px;
-  font-family: 'stylish', sans-serif;
+  font-family: 'Poppins', 'stylish', sans-serif;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   right: 20px;
   width: 230px;
   text-align: center;
   background-color: white;
-  font-size: 20px;
-  color: rgb(57, 57, 57);
+  font-size: 17px;
+  color: rgb(68, 68, 68);
   z-index: 99;
 }
 
 .extras-title {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 0px;
 }
 
