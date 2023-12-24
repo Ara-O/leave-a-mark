@@ -1,4 +1,4 @@
 <template>
-  <div class="binding-clips"></div>
+  <!-- <div class="binding-clips"></div> -->
   <RouterView />
 </template>

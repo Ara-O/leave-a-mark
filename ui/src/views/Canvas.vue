@@ -1,7 +1,13 @@
 <template>
   <main>
     <canvas id="canvas" height="960" width="2000" ref="canvasElement"></canvas>
-    <div class="extras">
+    <div class="expanded extras">
+      <img
+        @click="toggleExpandExtras"
+        src="@/assets/hamburger1.svg"
+        alt="Hamburger icon"
+        class="hamburger-icon"
+      />
       <h5 class="extras-title">Extras</h5>
       <div class="extras-options">
         <h5>Line color</h5>
@@ -24,6 +30,10 @@ let canvas: fabric.Canvas
 let thickness = ref<number>(1)
 
 const socket = io(import.meta.env.VITE_API_SOCKET_URL)
+
+function toggleExpandExtras() {
+  document.querySelector('.extras')?.classList.toggle('expanded')
+}
 
 socket.on('connect', () => {
   console.log(socket.id)
@@ -59,7 +69,7 @@ watch(thickness, () => {
 })
 
 watchEffect(() => {
-  const CELL_SIZE = 15
+  const CELL_SIZE = 20
 
   canvas = new fabric.Canvas(canvasElement.value as HTMLCanvasElement, {
     isDrawingMode: true,
